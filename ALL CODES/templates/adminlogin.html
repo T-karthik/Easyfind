@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   <meta charset="utf-8">
+<style>
+body{
+ background-image:url('windows-10.jpg');
+  background-color:#222f3e;
+}
+.heading{
+ margin-top:40px;
+}
+.container{
+ width:800px;
+ heigth:800px;
+ margin-top:80px;
+}
+
+#JAVA{
+ background-color:white;
+ width:400px;
+ height:400px;
+ border-radius:20px;
+ color:black;
+ margin-top:40px;
+ margin-left:200px;
+}
+
+li{
+ list-style:none;
+}
+
+li input{
+ border:none;
+ margin-top:20px;
+ border-bottom:1px solid black;
+ outline:none;
+}
+
+.extra{
+ height:40px;
+}
+
+.container{
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.heading{
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+i.far fa-eye-slash{
+ margin-top:35px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="heading">
+</div>
+<div class="container">
+
+	  <div id="JAVA" class="col-sm-4">
+   <center><h1>Admin Login</h1></center>
+  <form method="POST" action="">
+      <ul>
+	   <li>
+	      <i class="fas fa-user">&nbsp&nbsp<input type="text" id="username" name="username" placeholder="Username"></i><br><br>
+		  <i class="fas fa-lock">&nbsp&nbsp<input id="pswrd" type="password" name="password" placeholder="Password"><i class="far fa-eye-slash" onclick="myFunction()"></i></i><br><br>
+		  <button type="submit" class="btn btn-primary">Login</button>
+	   </li>
+	  </ul>
+  </form>
+	</div>
+</div>
+<div class="extra">
+</div>
+
+
+</body>
+</html>

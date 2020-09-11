@@ -1,0 +1,167 @@
+<html>
+<head>
+<title></title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   <meta charset="utf-8">
+
+
+
+<style>
+
+.column {
+  margin-top:100px;
+  margin-left:60px;
+  float: left;
+  width: 600px;;
+  height:400px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+#second{
+ margin-left:0px;
+ width:1179px;
+ height:100%;
+ margin-top:0px;
+ background-color:white;
+ color:white;
+}
+#second h1{
+ margin-left:140px;
+}
+
+
+
+
+
+#first{
+ margin-top:0px;
+ margin-left:0px;
+ width:200px;
+ height:890px;;
+ color:white;
+ background-color:#222f3e;
+}
+#first ul li{
+ margin-top:40px;
+ line-height:80px;
+ list-style:none;
+ margin-left:0px;
+ color:white;
+}
+#subjects{
+ color:black;
+}
+ul.cse li{
+ list-style:none;
+}
+ul.ece li{
+ list-style:none;
+}
+#first li a{
+ color:white;
+}
+
+</style>
+</head>
+
+
+<body>
+<div class="row">
+  <div id="first" class="column" >
+  <ul>
+    <li>
+	   <span><i class="fas fa-home">&nbsp&nbsp&nbsp<a href="adminhome.html">Home</a></i><br><br>
+	   <span><i class="fas fa-users">&nbsp&nbsp&nbsp<a href="adminstudentdata.html"><i>Users</i></a></i><br><br>
+	   <span><i class="fas fa-user-plus">&nbsp&nbsp&nbsp<a href=""><i>Subjects</i></a></i><br><br>
+	   <span><i class="fas fa-chart-bar">&nbsp&nbsp&nbsp<a href=""><i>Layout</i></a></i><br><br>
+	   <span><i class="fas fa-sign-out-alt">&nbsp&nbsp&nbsp<a href="home1.html">Logout</a></i><br><br>
+	</li>
+ </ul>
+  </div>
+  <div id="second" class="column">
+       <div class="jumbotron text-center">
+        <h1>YOUR SUBJECTS</h1>
+		<p>“It is the supreme art of the teacher to awaken joy in creative expression and knowledge”</p>
+  </div>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="#">Teachers's Desk</a>
+    <ul class="nav nav-bar nav navbar-right">
+      <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"><b class="caret"></b></i></button>
+               <ul class="dropdown-menu">
+                   <li><a href="#">Details</a></li>
+                   <li><a href="#">Classes</a></li>
+               </ul>
+    </ul>
+  </div>
+</nav>
+<div class="form_links">
+ <div id="subjects" class="jumbotron">
+  <div class="dropdown">
+    <b><i class="fa fa-chevron-circle-right">&nbsp&nbsp<a id="cse" class="dropdown-toggle" type="button" data-toggle="dropdown">CSE</i></b></a>
+    <ul class="cse">
+      <li><a href="admincss.html">Cascadding Style Sheet</a><br><br></li>
+      <li><a href="#">Hyper Text Markup Language</a><br><br></li>
+      <li><a href="#">JAVA SCRIPT</a><br><br></li>
+	  <li><a href="#">Flask PYTHON</a><br><br></li>
+	  <li><a href="#">BOOTSTRAP</a></li>
+    </ul>
+  </div>
+  <br><br>
+
+  <div class="dropdown">
+    <b><i class="fa fa-chevron-circle-right">&nbsp&nbsp<u><a id="ece" class="dropdown-toggle" type="button" data-toggle="dropdown">ECE</u></i></b><a>
+    <ul class="ece">
+      <li><a href="adminelectronics.html">Digital Logic Circuits</a><br><br></li>
+      <li><a href="#">DIGITAL SIGNAL PROCESSING</a><br><br></li>
+      <li><a href="#">DIGITAL COMMUNICATIONS</a><br><br></li>
+	  <li><a href="#">ANALOG ELECTRONICS</a><br><br></li>
+	  <li><a href="#">ELECTRONICS</a></li>
+    </ul>
+  </div>
+ </div>
+</div>
+  </div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#course").click(function(){
+       $('#second').load('course.html');
+   });
+   $("#projec").click(function(){
+      $('#second').load('projects.html');
+  });
+  $('#cse').click(function(){
+    $('#second').show('#cse-dropdown');
+       });
+       $('#about').click(function(){
+            $('html,body').animate({
+              scrollTop:$("#jumbo").offset().top
+              },1000)
+            });
+            $('#contact').click(function(){
+              $('#second').load('contact.html');
+                 });
+  });
+</script>
+
+</body>
+</html>

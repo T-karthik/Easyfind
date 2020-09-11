@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   <meta charset="utf-8">
+<style>
+
+
+
+
+.container{
+   margin-left:0px;
+   width:100%;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+    <script async src="https://cse.google.com/cse.js?cx=015284846037877669381:bshwrwsvjk9"></script>
+    <div class="gcse-search"></div>
+
+   <h1>PDF's</h1>
+         <table>
+           <thead>
+               <tr>
+
+
+               </tr>
+          </thead>
+         <tbody>
+             {% for row in value %}
+                 <tr>
+                    <td></td>
+                    <td>{{row[0]}}</td>
+                    <td><a href="{{row[2]}}">{{row[1]}}</a></td>
+                </tr>
+             {% endfor %}
+        </tbody>
+      </table>
+   </div>
+
+     <div id="jumbo" class="jumbotron">
+   <h1>Research Papers</h1>
+   <table>
+     <thead>
+         <tr>
+
+
+         </tr>
+    </thead>
+   <tbody>
+       {% for row in value %}
+           <tr>
+              <td></td>
+              <td>{{row[0]}}</td>
+              <td><a href="{{row[4]}}">{{row[3]}}</a></td>
+          </tr>
+       {% endfor %}
+  </tbody>
+</table>
+   </div>
+
+        <div id="jumbo" class="jumbotron">
+   <h1>Youtube Links</h1>
+   <table>
+     <thead>
+         <tr>
+
+
+         </tr>
+    </thead>
+   <tbody>
+       {% for row in value %}
+           <tr>
+              <td></td>
+              <td>{{row[0]}}</td>
+              <td><a href="{{row[6]}}">{{row[5]}}</a></td>
+          </tr>
+       {% endfor %}
+  </tbody>
+</table>
+   </div>
+</div>
+
+
+<script>
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<html>
+<head>
+<title></title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   <meta charset="utf-8">
+
+
+
+<style>
+
+.column {
+  margin-top:100px;
+  margin-left:60px;
+  float: left;
+  width: 600px;;
+  height:400px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+#second{
+ margin-left:0px;
+ width:1179px;
+ height:890px;
+ margin-top:0px;
+ background-color:skyblue;
+ color:white;
+}
+#second h1{
+ margin-left:140px;
+}
+
+
+
+
+
+#first{
+ margin-top:0px;
+ margin-left:0px;
+ width:200px;
+ height:890px;;
+ color:white;
+ background-color:#222f3e;
+}
+#first ul li{
+ margin-top:40px;
+ line-height:80px;
+ list-style:none;
+ margin-left:0px;
+ color:white;
+}
+#subjects{
+ color:black;
+}
+ul.cse li{
+ list-style:none;
+}
+ul.ece li{
+ list-style:none;
+}
+#first li a{
+ color:white;
+}
+table{
+ border-collapse:collapse;
+ border:2px solid black;
+ color:black;
+ min-width:1000px;
+ font-family:monospace;
+ font-size:20px;
+ text-align:left;
+ margin-top:40px;
+ margin-left:100px;
+}
+th{
+ background-color:#222f3e;
+ color:white;
+ margin-left:40px;
+}
+tr{
+ background-color:white;
+}
+
+
+</style>
+</head>
+
+
+<body>
+<div class="row">
+  <div id="first" class="column" >
+  <ul>
+    <li>
+	   <span><i class="fas fa-home">&nbsp&nbsp&nbsp<a href="adminhome.html">Home</a></i><br><br>
+	   <span><i class="fas fa-users">&nbsp&nbsp&nbsp<a href=""><i>Users</i></a></i><br><br>
+	   <span><i class="fas fa-user-plus">&nbsp&nbsp&nbsp<a href="adminsubjects.html"><i>Subjects</i></a></i><br><br>
+	   <span><i class="fas fa-chart-bar">&nbsp&nbsp&nbsp<a href=""><i>Layout</i></a></i><br><br>
+	   <span><i class="fas fa-sign-out-alt">&nbsp&nbsp&nbsp<a href="home1.html">Logout</a></i><br><br>
+	</li>
+ </ul>
+  </div>
+  <div id="second" class="column">
+       <table>
+    <thead>
+    <tr>
+	    <th></th>
+        <th>Email</th>
+        <th>User Name</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in value %}
+            <tr>
+			    <td></td>
+
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+ </table
+  </div>
+
+</div>
+
+
+
+</body>
+</html>

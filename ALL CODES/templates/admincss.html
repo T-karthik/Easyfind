@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   <meta charset="utf-8">
+<style>
+
+
+
+
+.container{
+   margin-left:0px;
+   width:100%;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+
+
+   <h1>PDF's</h1><button type="submit" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal">add</button>
+         <table>
+           <thead>
+               <tr>
+
+
+               </tr>
+          </thead>
+         <tbody>
+             {% for row in value %}
+                 <tr>
+                    <td></td>
+                    <td>{{row[0]}}</td>
+                    <td><a href="{{row[2]}}">{{row[1]}}</a></td>
+                </tr>
+             {% endfor %}
+        </tbody>
+      </table>
+   </div>
+
+     <div id="jumbo" class="jumbotron">
+   <h1>Research Papers</h1>
+   <table>
+     <thead>
+         <tr>
+
+
+         </tr>
+    </thead>
+   <tbody>
+       {% for row in value %}
+           <tr>
+              <td></td>
+              <td>{{row[0]}}</td>
+              <td><a href="{{row[4]}}">{{row[3]}}</a></td>
+          </tr>
+       {% endfor %}
+  </tbody>
+</table>
+   </div>
+
+        <div id="jumbo" class="jumbotron">
+   <h1>Youtube Links</h1>
+   <table>
+     <thead>
+         <tr>
+
+
+         </tr>
+    </thead>
+   <tbody>
+       {% for row in value %}
+           <tr>
+              <td></td>
+              <td>{{row[0]}}</td>
+              <td><a href="{{row[6]}}">{{row[5]}}</a></td>
+          </tr>
+       {% endfor %}
+  </tbody>
+</table>
+   </div>
+
+   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form method="POST" action="">
+    <div class="form-group">
+      <label for="recipient-name" class="col-form-label">Pdf:</label>
+      <textarea type="text" name="pdf" class="form-control" id="recipient-name" placeholder="Topic name"></textarea><br>
+<textarea type="text" name="pdflink" class="form-control" id="recipient-name" placeholder="pdflink"></textarea>
+    </div>
+  <div class="form-group">
+      <label for="recipient-name" class="col-form-label">Document:</label>
+      <textarea type="text" name="document" class="form-control" id="recipient-name" placeholder="Topic Name"></textarea><br>
+<textarea type="text" name="documentlink" class="form-control" id="recipient-name" placeholder="Research Paper Link"></textarea>
+    </div>
+  <div class="form-group">
+      <label for="recipient-name" class="col-form-label">Youtube:</label>
+      <textarea type="text" name="youtube" class="form-control" id="recipient-name" placeholder="Topic Name"></textarea><br>
+<textarea type="text" name="youtubelink" class="form-control" id="recipient-name" placeholder="Youtube Link"></textarea>
+    </div>
+<div class="modal-footer">
+  <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <button type="submit" class="btn btn-primary">add</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+<script>
+
+
+
+</script>
+
+
+</body>
+</html>
